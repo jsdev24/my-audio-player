@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --bg-color: rgb(51, 51, 51);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.mycontainer {
+    width: 100%;
+}
+
+nav {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+    background: var(--bg-color);
+}
+
+nav img {
+    width: 50px;
+}
+
+.songList {
+    height: 65vh;
+    overflow: auto;
+    position: relative;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.musicIcon {
+    margin-right: 10px;
+}
+
+.songlist-container {
+    width: 90%;
+    margin: 85px auto 50px;
+}
+
+.songLength {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player {
+    height: 35vh;
+    position: fixed;
+    background-color: var(--bg-color);
+    bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.playerContainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.controlSection {
+    display: flex;
+    justify-content: center;
+}
+
+.controlSection svg {
+    width: 2em !important;
+    height: 2em !important;
+    margin: 0 25px;
+    border: 3px solid var(--bg-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: content-box;
+    background-color: var(--bg-color) !important;
+    box-shadow: 0px 0px 5px #000, inset 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.controlSection svg {
+    color: #fff;
+}
+
+.songdetails .progressBarBorder {
+    width: 90%;
+    height: 10px;
+    margin: auto;
+    background: #1d1f21;
+    position: relative;
+}
+
+.songdetails .progressCirle {
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background-color: #000;
+}
+
+.progressBar {
+    height: 10px;
+    width: 0%;
+    position: absolute;
+    background: #000;
+}
+
+.nowPlaying {
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+
+@media only screen and (min-width: 730px) {
+    .mycontainer {
+        display: flex;
+    }
+
+    .songList {
+        width: 50%;
+        height: 100vh;
+        overflow: auto;
+        position: relative;
+    }
+
+    .player {
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        background-color: var(--bg-color);
+        bottom: 0;
+        position: relative;
+        display: flex;
+    }
+}

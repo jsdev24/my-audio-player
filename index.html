@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Audio Player</title>
+</head>
+<body>
+
+    <section class="mycontainer">
+        <nav class="navbar navbar-light">
+            <img src="img/logo.png" alt="">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="search" type="text" placeholder="Search" aria-label="Search"
+                    autocomplete="off">
+            </form>
+        </nav>
+
+        <div class="songList">
+            <div class="songlist-container">
+                <audio id="audio" ontimeupdate="progress(this)"></audio>
+                <ul class="list-group" id="song-list-group"></ul>
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="playerContainer">
+                <div class="songdetails">
+                    <div class="progressBarBorder text-light">
+                        <div class="progressCirle" id="progressCirle"></div>
+                        <div class="progressBar" id="progressBar"></div>
+                    </div>
+
+                    <div class="songLength text-light">
+                        <span id="currentLength">0:00</span>
+                        <span id="totalLength">0:00</span>
+                    </div>
+
+                    <div class="nowPlaying text-light" id="nowPlaying">Pachtaoge | Arijit Singh | B Praak</div>
+                </div>
+
+                <div class="controlSection">
+                    <svg width="1em" height="1em" id="prev" viewBox="0 0 16 16" class="bi bi-skip-start-fill"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.5 3.5A.5.5 0 0 0 4 4v8a.5.5 0 0 0 1 0V4a.5.5 0 0 0-.5-.5z" />
+                        <path
+                            d="M4.903 8.697l6.364 3.692c.54.313 1.232-.066 1.232-.697V4.308c0-.63-.692-1.01-1.232-.696L4.903 7.304a.802.802 0 0 0 0 1.393z" />
+                    </svg>
+
+                    <svg width="1em" height="1em" id="playpause" viewBox="0 0 16 16" class="bi bi-play-fill"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                    </svg>
+
+                    <svg width="1em" height="1em" id="next" viewBox="0 0 16 16" class="bi bi-skip-end-fill"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
